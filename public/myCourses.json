@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Preparing for School",
+    "description": "diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+    "img": "https://i.ibb.co/7k7JyT6/online-education.png",
+    "price": 32
+  },
+  {
+    "id": 2,
+    "name": "Development of Creativity",
+    "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
+    "img": "https://i.ibb.co/6bw3xB3/chemistry-1.png",
+    "price": 31
+  },
+  {
+    "id": 3,
+    "name": "Mental Arithmetic",
+    "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+    "img": "https://i.ibb.co/WnxNVGM/test.png",
+    "price": 46
+  },
+  {
+    "id": 4,
+    "name": "Experimenters Club",
+    "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+    "img": "https://i.ibb.co/NTPYvFd/vector.png",
+    "price": 29
+  }
+]

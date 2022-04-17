@@ -13,7 +13,7 @@ const Courses = () => {
   return (
     <div className="my-4">
       <div>
-        <h1 className="fw-bold text-success text-center">My Courses</h1>
+        <h1 className="fw-bold text-primary text-center">My Courses</h1>
         <p className="text-center ">
           Rem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididun

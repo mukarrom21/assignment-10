@@ -18,7 +18,7 @@ const Banner = () => {
             className="text-dark"
           >
             <h1 className="text-primary">Professional Tutor</h1>
-            <h1>In depth lesions</h1>
+            <h1>Learn with easiest way</h1>
             <p>
               Tell us what you need help with and our smart matching system will
               connect you with an online tutor. Sign up for a free trial using a
@@ -39,7 +39,7 @@ const Banner = () => {
             className="text-dark"
           >
             <h1 className="text-primary">Professional Tutor</h1>
-            <h1>Learn with easiest way</h1>
+            <h1>Learn with best practices</h1>
             <p>
               Get live 1-on-1 help in our advanced lesson space. Use a virtual
               whiteboard, audio/video chat, screen sharing, text editor and much
@@ -60,7 +60,7 @@ const Banner = () => {
             className="text-dark"
           >
             <h1 className="text-primary">Professional Tutor</h1>
-            <h1>Learn with good practices</h1>
+            <h1>In depth lessons</h1>
             <p>
               After the lesson is completed, both the tutor and student have the
               opportunity to rate each other, maintaining the quality of our

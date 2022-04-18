@@ -1,5 +1,6 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
+import CheckOut from "../CheckOut/CheckOut";
 
 const Blog = () => {
   return (
@@ -80,7 +81,7 @@ const Blog = () => {
             </p>
           </Accordion.Body>
         </Accordion.Item>
-      </Accordion>
+      </Accordion> 
     </div>
   );
 };

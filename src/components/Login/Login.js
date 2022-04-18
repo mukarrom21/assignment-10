@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import {
   useSendPasswordResetEmail,
@@ -11,6 +11,7 @@ import Loading from "../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
+  const emailRef = useRef("");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -44,15 +45,16 @@ const Login = () => {
     navigate("/register");
   };
 
-  const resetPassword = async (event) => {
-    const email = event.target.email.value;
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
     if (email) {
-      await sendPasswordResetEmail(email);
-      toast("Sent email");
-    } else {
-      toast("please enter your email address");
+        await sendPasswordResetEmail(email);
+        toast('Sent email');
     }
-  };
+    else{
+        toast('please enter your email address');
+    }
+}
 
   return (
     <div className="col-md-6 col-lg-4 mx-auto mt-4 shadow p-4 rounded">
@@ -61,6 +63,7 @@ const Login = () => {
         <Form.Group className="mb-3" controlId="formGroupEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
+            ref={emailRef}
             type="email"
             placeholder="Enter email"
             name="email"

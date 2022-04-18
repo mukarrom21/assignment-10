@@ -28,7 +28,7 @@ const SignUp = () => {
   }
 
   if (error) {
-    errorElement = <p className="text-danger">Error: {error?.message}</p>
+    errorElement = <p className="text-danger">Error: {error?.message}</p>;
   }
 
   if (user) {
@@ -44,6 +44,7 @@ const SignUp = () => {
 
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ displayName: name });
+    createUserWithEmailAndPassword(email, password);
     console.log("Updated profile");
     navigate("/home");
   };
@@ -79,9 +80,9 @@ const SignUp = () => {
             required
           />
         </Form.Group>
-        <Button variant="primary" type="submit" className="w-100">
+        {/* <Button variant="primary" type="submit" className="w-100">
           Sign up
-        </Button>
+        </Button> */}
         {/* Check */}
         <input
           onClick={() => setAgree(!agree)}
@@ -89,20 +90,25 @@ const SignUp = () => {
           name="terms"
           id="terms"
         />
-        {/* <label className={agree ? 'ps-2': 'ps-2 text-danger'} htmlFor="terms">Accept Genius Car Terms and Conditions</label> */}
+
         <label className={`ps-2 ${agree ? "" : "text-danger"}`} htmlFor="terms">
           Accept Genius Car Terms and Conditions
         </label>
         <input
           disabled={!agree}
-          className="w-50 mx-auto btn btn-primary mt-2"
+          className="w-100 mx-auto btn btn-primary mt-2"
           type="submit"
           value="Register"
         />
       </Form>
+      {errorElement}
       <p className="mt-4">
         Already have an account?{" "}
-        <Link to={"/login"} className="text-decoration-none text-danger">
+        <Link
+          to={"/login"}
+          onClick={navigateLogin}
+          className="text-decoration-none text-danger"
+        >
           Please Login
         </Link>
       </p>

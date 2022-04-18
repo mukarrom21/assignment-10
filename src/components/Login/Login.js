@@ -1,22 +1,16 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Form,
-  Toast,
-  ToastBody,
-  ToastContainer,
-} from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import {
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
 import Loading from "../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
-  const [toast, setToast] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -39,7 +33,6 @@ const Login = () => {
   if (error) {
     errorElement = <p className="text-danger">Error: {error?.message}</p>;
   }
-
   const handleLogin = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
@@ -52,12 +45,12 @@ const Login = () => {
   };
 
   const resetPassword = async (event) => {
-    const email = event.current.emeil.value;
+    const email = event.target.email.value;
     if (email) {
       await sendPasswordResetEmail(email);
-      setToast("Sent email");
+      toast("Sent email");
     } else {
-      setToast("please enter your email address");
+      toast("please enter your email address");
     }
   };
 
@@ -99,15 +92,16 @@ const Login = () => {
         </Link>
       </p>
       <p>
-        Forget Password?{" "}
+        Forget Password?
         <button
           className="btn btn-link text-primary pe-auto text-decoration-none"
           onClick={resetPassword}
         >
           Reset Password
-        </button>{" "}
+        </button>
       </p>
       <SocialLogin></SocialLogin>
+      <ToastContainer />
     </div>
   );
 };

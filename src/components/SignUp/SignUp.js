@@ -7,6 +7,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Loading/Loading";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const SignUp = () => {
   const [agree, setAgree] = useState(false);
@@ -105,6 +106,7 @@ const SignUp = () => {
           Please Login
         </Link>
       </p>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };

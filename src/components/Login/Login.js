@@ -13,6 +13,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Loading/Loading";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
   const [toast, setToast] = useState("");
@@ -106,9 +107,7 @@ const Login = () => {
           Reset Password
         </button>{" "}
       </p>
-      <ToastContainer>
-        <ToastBody>{toast}</ToastBody>
-      </ToastContainer>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };

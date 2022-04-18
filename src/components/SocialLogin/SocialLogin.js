@@ -7,14 +7,6 @@ import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Loading/Loading";
 import google from "../../Images/google.png";
-import facebook from "../../Images/facebook.png";
-import github from "../../Images/github.png";
-// import facebook from '../../../images/social/facebook.png';
-// import github from '../../../images/social/github.png';
-// import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-// import auth from '../../../firebase.init';
-// import { useNavigate } from 'react-router-dom';
-// import Loading from '../../Shared/Loading/Loading';
 
 const SocialLogin = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
